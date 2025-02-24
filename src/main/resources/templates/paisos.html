@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Llista de Països</title>
+  <link rel="stylesheet" href="/css/plantilla2.css">
+
+</head>
+<body>
+<h1>Llista de Països</h1>
+<ul>
+  <tr th:each="pais : ${paisos}" th:text="${pais.nom}">
+    <td th:text="${pais.provincia}"></td>
+
+  </tr>
+
+
+</ul>
+</body>
+</html>

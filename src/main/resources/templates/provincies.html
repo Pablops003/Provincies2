@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Províncies de <span th:text="${pais}"></span></title>
+  <link rel="stylesheet" href="/css/plantilla3.css">
+
+</head>
+<body>
+<h1>Províncies del país: <span th:text="${pais}"></span></h1>
+<ul>
+  <tr th:each="provincia : ${provincies}" th:text="${provincia.nom}">
+    <td th:text="${provincia.pais_id.nom}"></td>
+  </tr>
+
+</ul>
+</body>
+</html>

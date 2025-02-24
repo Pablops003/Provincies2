@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Llista de Ciutats</title>
+  <link rel="stylesheet" href="/css/plantilla1.css">
+</head>
+<body>
+<h1>Llista de Ciutats</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>nom</th>
+    <th>poblacio</th>
+    <th>descripcio</th>
+    <th>imatge</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="Ciudad : ${ciudad}">
+    <td th:text="${Ciudad.id}"></td>
+    <td th:text="${Ciudad.nom}"></td>
+    <td th:text="${Ciudad.poblacio}"></td>
+    <td th:text="${Ciudad.descripcio}"></td>
+    <td th:text="${Ciudad.imatge}"></td>
+    <td th:text="${Ciudad.provincia_id.nom}"></td>
+
+
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

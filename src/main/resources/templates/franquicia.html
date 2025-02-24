@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista franquicias</title>
+    <link rel="stylesheet" href="/css/plantilla4.css">
+
+</head>
+    <body>
+
+        <h1>Llista de franquicias</h1>
+        <table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Ciudades</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="franquicias : ${franquicia}">
+        <td th:text="${franquicias.id}"></td>
+        <td th:text="${franquicias.nom}"></td>
+        <td th:text="${franquicias.ciudadList}"></td>
+        <td>
+            <ul>
+                <li th:each="ciudad : ${franquicia.ciudadList}" th:text="${ciudad.nombre}"></li>
+            </ul>
+        </td>
+    </tr>
+
+    </body>
+</html>
